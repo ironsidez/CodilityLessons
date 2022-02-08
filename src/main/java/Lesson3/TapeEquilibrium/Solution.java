@@ -1,6 +1,7 @@
 package Lesson3.TapeEquilibrium;
 
 public class Solution {
+
     public static int solution(int[] A) {
         int arraySum = getArraySum(A);
         int leftSum = 0;
