@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
     @Test
-    void solutionTest1(){
+    void solutionForThreeJumps(){
         int start = 10;
         int end = 85;
         int jumpLength = 30;
@@ -19,7 +19,7 @@ class SolutionTest {
     }
 
     @Test
-    void solutionTestAllOnes(){
+    void solutionForAllOnes(){
         int start = 1;
         int end = 1;
         int jumpLength = 1;
@@ -30,7 +30,7 @@ class SolutionTest {
     }
 
     @Test
-    void solutionTestStartPassedEnd(){
+    void solutionForStartPassedEnd(){
         int start = 5;
         int end = 1;
         int jumpLength = 1;
@@ -41,11 +41,22 @@ class SolutionTest {
     }
 
     @Test
-    void solutionTestLotsOfJumps(){
+    void solutionForLotsOfJumps(){
         int start = 1;
         int end = 1000000;
         int jumpLength = 1;
         int expected = 999999;
+
+        int result = solution(start, end, jumpLength);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void solutionForBigJump(){
+        int start = 1;
+        int end = 1000000;
+        int jumpLength = 1000001;
+        int expected = 1;
 
         int result = solution(start, end, jumpLength);
         assertEquals(expected, result);
